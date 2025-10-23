@@ -1,8 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a personal chat application with AI helper integration built with Next.js and Gemini AI.
 
-## Getting Started
+## Features
 
-First, run the development server:
+- 💬 Personal chat interface (send and receive messages)
+- 🤖 AI Helper modal that can answer questions about your chat
+- 💾 Messages saved to localStorage
+- 🎨 Clean, modern UI
+
+## Setup
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Configure Gemini AI API Key
+
+Create a file called `.env.local` in the root directory and add your Gemini API key:
+
+```
+GEMINI_API_KEY=your_api_key_here
+```
+
+Get your API key from: https://makersuite.google.com/app/apikey
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
@@ -16,9 +39,23 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Main Chat
+- Type a message in the input field
+- Click **"Send"** to add it as a sent message (appears on the right in blue)
+- Click **"Receive"** to add it as a received message (appears on the left in white)
+- Messages are automatically saved to your browser's localStorage
+
+### AI Helper
+1. Click the **"🤖 AI Helper"** button in the top right corner
+2. A modal will open on the top right of the screen
+3. Ask the AI questions about your chat (e.g., "Summarize my messages", "What did I say about...")
+4. The AI has full access to your chat context and can help you understand or analyze your messages
+5. Click the **×** to close the modal
+
+### Clear Chat
+- Click **"Clear Chat"** in the top menu to delete all messages
 
 ## Learn More
 
